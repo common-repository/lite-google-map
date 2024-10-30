@@ -1,0 +1,120 @@
+
+input[type="checkbox"].own-yesno-field-value {
+  display: none;
+}
+
+.onoffswitch {
+    position: relative; width: 116px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 50px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 45%; height: 41px; padding: 0; line-height: 41px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 14px;
+    background-color: #EEEEEE; color: #34A7C1;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 14px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 38px; margin: 1.5px;
+    /*! background:#c6c6c6; */
+    position: absolute; top: 0; bottom: 0;
+    right: 71px;
+    border: 2px solid #FFFFFF; border-radius: 50px;
+    transition: all 0.3s ease-in 0s; 
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+    will-change: transform;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+    background-color: #2693e6; 
+}
+
+
+/*===== Radio Styled=====*/
+
+.cmb2-id-mapTypeId  [type="radio"]:checked,
+.cmb2-id-mapTypeId [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.cmb2-id-mapTypeId [type="radio"]:checked + label,
+.cmb2-id-mapTypeId [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+.cmb2-id-mapTypeId [type="radio"]:checked + label:before,
+.cmb2-id-mapTypeId [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.cmb2-id-mapTypeId [type="radio"]:checked + label:after,
+.cmb2-id-mapTypeId [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background:#2693E6;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.cmb2-id-mapTypeId [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.cmb2-id-mapTypeId [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.cmb-type-radio-image .cmb2-radio-list input[type="radio"] + label:hover, .cmb-type-radio-image .cmb2-radio-list input[type="radio"]:checked + label {
+    border-color: #2693e6;
+}
+input[type=text], input[type=search], input[type=radio], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=password], input[type=checkbox], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], select, textarea {
+    border: 1px solid #b9b9b9;
+    box-shadow: none;
+}
+#submit-cmb{
+	border-radius:0!important
+}
+#zoom{
+	height: 32px;
+}
